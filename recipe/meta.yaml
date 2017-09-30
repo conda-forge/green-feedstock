@@ -11,7 +11,7 @@ source:
   sha256: 0a64e7372079f57643e26e220d1d8ccecb26ba6416963d61e2ec20d2990eda98
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - green = green.cmdline:main
   script: python setup.py install --single-version-externally-managed --record record.txt
@@ -27,6 +27,8 @@ requirements:
     - python-termstyle
     - unidecode
     - mock  # [py2k]
+    - coverage
+    - get_terminal_size
 
 test:
   imports:

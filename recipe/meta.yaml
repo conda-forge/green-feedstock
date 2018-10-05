@@ -11,7 +11,7 @@ source:
   sha256: 4c0c163bd2ce2da1f201eb69fd92fc24aaeab884f9e5c5a8c23d507a53336fa8
 
 build:
-  number: 0
+  number: 1000
   entry_points:
     - green = green.cmdline:main
   script: python setup.py install --single-version-externally-managed --record record.txt

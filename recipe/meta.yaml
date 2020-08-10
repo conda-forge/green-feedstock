@@ -1,5 +1,5 @@
 {% set name = "green" %}
-{% set version = "2.13.1" %}
+{% set version = "3.2.1" %}
 
 package:
   name: {{ name }}
@@ -8,10 +8,10 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ea6e2699a2e58df834d2c845fb2b076c12d4835daecfcb658c6bd5583ebf4b7d
+  sha256: c5a90e247237ac7e320120961608cf65191134fa400d327cbd4d09864c880935
 
 build:
-  number: 1
+  number: 0
   entry_points:
     - green = green.cmdline:main
   script: python setup.py install --single-version-externally-managed --record record.txt
@@ -40,27 +40,19 @@ about:
   home: https://github.com/CleanCut/green
   license: MIT
   license_family: MIT
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE'
-  summary: 'Green is a clean, colorful, fast python test runner'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE
+  summary: Green is a clean, colorful, fast python test runner
   description: >
     Green - A clean, colorful, fast python test runner.
 
-    Features
-    --------
+    Features --------
 
-    - **Clean** - Low redundancy in output. Result statistics for each test is vertically aligned.
-    - **Colorful** - Terminal output makes good use of color when the terminal supports it.
-    - **Fast** - Tests run in independent processes.  (One per processor by default.  Does *not* play nicely with `gevent`)
-    - **Powerful** - Multi-target + auto-discovery.
-    - **Traditional** - Use the normal `unittest` classes and methods for your unit tests.
-    - **Descriptive** - Multiple verbosity levels, from just dots to full docstring output.
-    - **Convenient** - Bash-completion and ZSH-completion of options and test targets.
-    - **Thorough** - Built-in, optional integration with
+    - **Clean** - Low redundancy in output. Result statistics for each test is vertically aligned. - **Colorful** - Terminal output makes good use of color when the terminal supports it. - **Fast** - Tests run in independent processes.  (One per processor by default.  Does *not* play nicely with `gevent`) - **Powerful**
+    - Multi-target + auto-discovery. - **Traditional** - Use the normal `unittest` classes and methods for your unit tests. - **Descriptive** - Multiple verbosity levels, from just dots to full docstring output. - **Convenient** - Bash-completion and ZSH-completion of options and test targets. - **Thorough** - Built-in,
+    optional integration with
       [coverage](http://nedbatchelder.com/code/coverage/).
-    - **Embedded** - Can be run with a setup command without in-site installation.
-    - **Modern** - Supports Python 2.7, and 3.4+. Additionally, [PyPy](http://pypy.org) is supported on a best-effort basis.
-    - **Portable** - macOS, Linux, and BSDs are fully supported.  Windows is supported on a best-effort basis.
-    - **Living** - This project grows and changes.  See the
+    - **Embedded** - Can be run with a setup command without in-site installation. - **Modern** - Supports Python 2.7, and 3.4+. Additionally, [PyPy](http://pypy.org) is supported on a best-effort basis. - **Portable** - macOS, Linux, and BSDs are fully supported.  Windows is supported on a best-effort basis. - **Living**
+    - This project grows and changes.  See the
   doc_url: https://github.com/CleanCut/green#green
   dev_url: https://github.com/CleanCut/green
 

@@ -11,7 +11,7 @@ source:
   sha256: 3473abb4629c8c1af9f6b59a4f9c757315736580053a64bbfd91ff21ccad57a8
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - green = green.cmdline:main
   script: python setup.py install --single-version-externally-managed --record record.txt
@@ -24,11 +24,11 @@ requirements:
   run:
     - python
     - colorama
-    - python-termstyle
     - unidecode
-    - mock  # [py2k]
+    - mock
     - coverage
     - get_terminal_size
+    - lxml
 
 test:
   imports:

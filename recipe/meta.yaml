@@ -1,5 +1,5 @@
 {% set name = "green" %}
-{% set version = "3.2.4" %}
+{% set version = "3.3.0" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3473abb4629c8c1af9f6b59a4f9c757315736580053a64bbfd91ff21ccad57a8
+  sha256: a4d86f2dfa4ccbc86f24bcb9c9ab8bf34219c876c24e9f0603aab4dfe73bb575
 
 build:
   number: 0
@@ -17,7 +17,7 @@ build:
   script: python setup.py install --single-version-externally-managed --record record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
 

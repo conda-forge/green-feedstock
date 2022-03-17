@@ -24,7 +24,7 @@ requirements:
   run:
     - python
     - colorama
-    - python-termstyle
+    - lxml
     - unidecode
     - mock  # [py2k]
     - coverage

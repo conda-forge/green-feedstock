@@ -11,16 +11,16 @@ source:
   sha256: 6325681c94afd0f225c7ea2dcfedfde88c859d60da384d54c9ee70b91e434b14
 
 build:
-  number: 0
+  number: 2
   entry_points:
     - green = green.cmdline:main
-  script: python setup.py install --single-version-externally-managed --record record.txt
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
     - python
     - setuptools
-
+    - pip
   run:
     - python
     - colorama
@@ -28,7 +28,6 @@ requirements:
     - unidecode
     - mock
     - coverage
-    - get_terminal_size
     - lxml
 
 test:

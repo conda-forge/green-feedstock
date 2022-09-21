@@ -1,5 +1,5 @@
 {% set name = "green" %}
-{% set version = "3.4.1" %}
+{% set version = "3.4.3" %}
 
 package:
   name: {{ name }}
@@ -8,7 +8,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 5dda2d2a277012227011f8f21523d70a550ebe5d47cc890fa16b9fcd9a91da53
+  sha256: 8865d0b77b5cb13851dd601a58ad2c82bcb52da7ca106f0538c5787f127368a6
 
 build:
   number: 0

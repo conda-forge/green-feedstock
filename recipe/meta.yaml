@@ -7,11 +7,11 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 8865d0b77b5cb13851dd601a58ad2c82bcb52da7ca106f0538c5787f127368a6
 
 build:
-  number: 0
+  number: 1
   entry_points:
     - green = green.cmdline:main
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
